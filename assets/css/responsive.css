@@ -1,0 +1,153 @@
+/* -----------------------------------------
+   PORTRAIT (mobile + tablette portrait)
+   -> image portrait dédiée (recommandé)
+----------------------------------------- */
+@media (orientation: portrait) and (max-width: 900px) {
+  .hero {
+    padding: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .hero::after {
+    background-image: url("/assets/images/profil/main-portrait.webp");
+    background-size: cover;
+    background-position: center 20%;
+  }
+
+  .hero.is-animated::after {
+    transform: scale(1.1);
+  }
+
+  .hero h4 {
+    max-width: 26ch;
+    font-size: 1.4rem;
+    padding: var(--spacing-xs);
+  }
+
+  .hero h2 {
+    max-width: 28ch;
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    padding: 0;
+  }
+
+  .nav a {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 10px 14px;
+  }
+
+  .nav a::after {
+    margin-top: 6px;
+  }
+}
+
+/* -----------------------------------------
+   PORTRAIT "grand" (tablette portrait)
+   -> nav en 2 colonnes
+----------------------------------------- */
+@media (orientation: portrait) and (min-width: 600px) and (max-width: 900px) {
+  .nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-sm);
+    justify-items: center;
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* -----------------------------------------
+   PORTRAIT LARGE (écrans verticaux larges, ex: 27")
+   -> on utilise aussi l'image portrait
+----------------------------------------- */
+@media (orientation: portrait) and (min-width: 901px) {
+  .hero {
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+
+  .hero::after {
+    background-image: url("/assets/images/profil/main-portrait.webp");
+    background-size: cover;
+    background-position: center 15%;
+  }
+
+  .hero.is-animated::after {
+    transform: scale(1.1);
+  }
+}
+
+/* -----------------------------------------
+   PETITE HAUTEUR (paysage mobile / petits écrans)
+   -> on revient à l'image paysage originale
+----------------------------------------- */
+@media (max-height: 650px) {
+  .hero {
+    justify-content: flex-start;
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .hero::after {
+    background-image: url("/assets/images/profil/main.webp");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* -----------------------------------------
+   ACCESSIBILITÉ : réduire les animations
+----------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero::after {
+    transition: none !important;
+  }
+}
+
+/* =========================
+   ABOUT – RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    padding: 48px 18px;
+    gap: 24px;
+  }
+
+  .about-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .about-image img {
+    height: min(60vh, 520px);
+    object-position: center 20%;
+  }
+
+  .about-section p {
+    text-align: left; /* plus lisible sur mobile */
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    text-align: center;
+  }
+}

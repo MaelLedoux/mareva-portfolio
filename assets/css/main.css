@@ -1,0 +1,69 @@
+@import url("reset.css");
+@import url("variables.css");
+@import url("index.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("responsive.css");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.about-container {
+  flex: 1;
+}
+
+/* =========================
+   ABOUT – FULL WIDTH
+========================= */
+
+.about-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.about-section {
+  flex: 0 0 520px;
+  font-family: var(--font-main);
+}
+
+.about-section h2 {
+  margin: 0 0 28px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  font-size: 2rem;
+}
+
+.about-section p {
+  margin: 0 0 18px 0;
+  line-height: 1.75;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: 840px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}

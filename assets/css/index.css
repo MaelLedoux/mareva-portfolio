@@ -1,0 +1,90 @@
+.hero {
+  min-height: 100vh;
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/assets/images/profil/main.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: translate(0, 0) scale(1);
+  transition: transform 15s linear;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero.is-animated::after {
+  transform: translate(-6%, 6%) scale(1.12);
+}
+
+h4 {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: var(--font-size-hero-sm);
+  padding: var(--spacing-sm);
+}
+
+h2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: var(--font-size-hero-md);
+}
+
+.nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--font-size-h3);
+  margin: 0 var(--spacing-sm);
+  padding: var(--spacing-xs);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: var(--transition);
+  margin-top: 4px;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  width: 100%;
+}
