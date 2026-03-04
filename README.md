@@ -19,6 +19,14 @@ Le site présente son univers, ses réalisations et son parcours, avec une appro
   - Comportement léger de type SPA
   - Aucun framework (choix volontaire)
 
+## 📸 Aperçu
+
+<img width="2539" height="1304" alt="accueil" src="https://github.com/user-attachments/assets/3a473d6c-ba21-4b71-87c9-cbbe93cfd2ac" />
+<img width="2543" height="1307" alt="projets" src="https://github.com/user-attachments/assets/41f74c99-c2a9-4284-8bab-c74203d8a4ab" />
+<img width="2537" height="1303" alt="about" src="https://github.com/user-attachments/assets/e2e7d532-fe97-4232-8568-f8a606cef478" />
+<img width="2542" height="1315" alt="about2" src="https://github.com/user-attachments/assets/d6706869-8331-400f-a1b0-c6569f05438c" />
+
+
 ## 📁 Structure du projet
 
 /assets
